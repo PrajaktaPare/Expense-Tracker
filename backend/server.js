@@ -12,7 +12,7 @@ const app = express()
 
 app.use(
   cors({
-    origin: "http://localhost:5173", // Vite default port
+    origin: "https://expense-tracker-frontend-lyart-zeta.vercel.app/", // Vite default port
     credentials: true,
   }),
 )
@@ -115,7 +115,7 @@ app.use("*", (req, res) => {
 const serverless = require("serverless-http")
     module.exports = app
     module.exports.handler = serverless(app)
-    
+
 // Handle unhandled promise rejections
 process.on("unhandledRejection", (err, promise) => {
   console.error("❌ Unhandled Promise Rejection:", err.message)
