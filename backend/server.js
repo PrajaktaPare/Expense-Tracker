@@ -12,7 +12,7 @@ const app = express()
 
 app.use(
   cors({
-    origin: "https://expense-tracker-frontend-lyart-zeta.vercel.app/", // Vite default port
+    origin: "*", // Vite default port
     credentials: true,
   }),
 )
