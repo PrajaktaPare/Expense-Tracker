@@ -72,7 +72,7 @@ export default function AddExpenseModal({ onClose }) {
   // Test backend connection
   const testConnection = async () => {
     try {
-      const response = await fetch("http://localhost:5000/api/health")
+      const response = await fetch(import.meta.env.VITE_BASE_API_URL+"/api/health")
       const data = await response.json()
       console.log("Backend health check:", data)
       alert(`Backend Status: ${data.status}\nMongoDB: ${data.mongodb}`)
