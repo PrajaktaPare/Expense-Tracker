@@ -105,13 +105,17 @@ app.use("*", (req, res) => {
   })
 })
 
-const PORT = process.env.PORT || 5000
-app.listen(PORT, () => {
-  console.log(`🚀 Server running on port ${PORT}`)
-  console.log(`📊 Health check: http://localhost:${PORT}/api/health`)
-  console.log(`🌐 Frontend should connect to: http://localhost:${PORT}`)
-})
+// const PORT = process.env.PORT || 5000
+// app.listen(PORT, () => {
+//   console.log(`🚀 Server running on port ${PORT}`)
+//   console.log(`📊 Health check: http://localhost:${PORT}/api/health`)
+//   console.log(`🌐 Frontend should connect to: http://localhost:${PORT}`)
+// })
 
+const serverless = require("serverless-http")
+    module.exports = app
+    module.exports.handler = serverless(app)
+    
 // Handle unhandled promise rejections
 process.on("unhandledRejection", (err, promise) => {
   console.error("❌ Unhandled Promise Rejection:", err.message)
