@@ -129,7 +129,7 @@ export default function LandingPage() {
               }}
               className="bg-white text-purple-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-100 transition-colors shadow-lg"
             >
-              Get Started — It's Free
+              Get Started 
             </button>
           </div>
 
@@ -141,7 +141,7 @@ export default function LandingPage() {
               <div className="bg-gradient-to-br from-purple-500 to-purple-700 text-white p-4 rounded-xl mb-4">
                 <div className="flex justify-between items-center mb-2">
                   <h3 className="font-bold">Monthly Overview</h3>
-                  <span className="text-sm">June 2023</span>
+                  <span className="text-sm">Sept 2025</span> 
                 </div>
                 <div className="text-3xl font-bold mb-2">₹ 3,240.50</div>
                 <div className="h-24 flex items-end space-x-2">

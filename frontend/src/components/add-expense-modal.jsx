@@ -69,18 +69,18 @@ export default function AddExpenseModal({ onClose }) {
     }
   }
 
-  // Test backend connection
-  const testConnection = async () => {
-    try {
-      const response = await fetch(import.meta.env.VITE_BASE_API_URL+"/api/health")
-      const data = await response.json()
-      console.log("Backend health check:", data)
-      alert(`Backend Status: ${data.status}\nMongoDB: ${data.mongodb}`)
-    } catch (error) {
-      console.error("Backend connection test failed:", error)
-      alert("Backend connection failed! Make sure your backend server is running on port 5000.")
-    }
-  }
+  // // Test backend connection
+  // const testConnection = async () => {
+  //   try {
+  //     const response = await fetch(import.meta.env.VITE_BASE_API_URL+"/api/health")
+  //     const data = await response.json()
+  //     console.log("Backend health check:", data)
+  //     alert(`Backend Status: ${data.status}\nMongoDB: ${data.mongodb}`)
+  //   } catch (error) {
+  //     console.error("Backend connection test failed:", error)
+  //     alert("Backend connection failed! Make sure your backend server is running on port 5000.")
+  //   }
+  // }
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4 backdrop-blur-sm">
@@ -99,13 +99,13 @@ export default function AddExpenseModal({ onClose }) {
 
         <h2 className="text-2xl font-bold mb-6 text-gray-800">Add New Expense</h2>
 
-        {/* Test Connection Button */}
+        {/* Test Connection Button
         <button
           onClick={testConnection}
           className="w-full mb-4 bg-blue-500 text-white py-2 px-4 rounded-lg hover:bg-blue-600 text-sm"
         >
           Test Backend Connection
-        </button>
+        </button> */}
 
         {error && <div className="bg-red-50 border border-red-200 text-red-600 px-4 py-3 rounded-lg mb-4">{error}</div>}
 

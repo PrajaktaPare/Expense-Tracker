@@ -55,7 +55,7 @@ export default function LoginForm({ onSwitch }) {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
-            placeholder="you@example.com"
+            // placeholder="you@example.com"
             disabled={loading}
           />
         </div>
@@ -75,7 +75,7 @@ export default function LoginForm({ onSwitch }) {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-purple-500 transition-colors"
-            placeholder="••••••••"
+            // placeholder="••••••••"
             disabled={loading}
           />
         </div>
